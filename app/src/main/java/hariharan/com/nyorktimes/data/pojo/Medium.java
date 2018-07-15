@@ -1,4 +1,4 @@
-package hariharan.com.newyorktimes.data.pojo;
+package hariharan.com.nyorktimes.data.pojo;
 
 /**
  * Created by hariharan on 15/07/18.

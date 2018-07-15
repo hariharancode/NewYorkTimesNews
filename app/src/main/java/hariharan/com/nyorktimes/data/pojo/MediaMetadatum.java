@@ -1,4 +1,4 @@
-package hariharan.com.newyorktimes.data.pojo;
+package hariharan.com.nyorktimes.data.pojo;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
