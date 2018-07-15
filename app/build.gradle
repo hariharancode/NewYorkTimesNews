@@ -29,6 +29,11 @@ dependencies {
     //Retro for Network
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    //Gson for json serialize and deserialize
+    compile 'com.google.code.gson:gson:2.6.2'
+
+    //Recycler View
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
 }

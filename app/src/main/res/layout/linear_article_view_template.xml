@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iVLinerArticleView"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+    <TextView
+        android:id="@+id/tVTitleLinerArticleView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iVLinerArticleView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tVByLinearArticleView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iVLinerArticleView"
+        app:layout_constraintTop_toBottomOf="@+id/tVTitleLinerArticleView" />
+
+    <TextView
+        android:id="@+id/tVDateLinearArticleView"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tVByLinearArticleView"
+        app:layout_constraintEnd_toEndOf="@+id/tVByLinearArticleView" />
+</android.support.constraint.ConstraintLayout>
