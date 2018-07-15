@@ -1,4 +1,4 @@
-package hariharan.com.nyorktimes.Network;
+package hariharan.com.nyorktimes.network;
 
 import com.google.gson.GsonBuilder;
 

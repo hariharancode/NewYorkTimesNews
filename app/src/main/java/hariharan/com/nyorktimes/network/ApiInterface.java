@@ -1,6 +1,7 @@
-package hariharan.com.nyorktimes.Network;
+package hariharan.com.nyorktimes.network;
 
 
+import hariharan.com.nyorktimes.data.pojo.MostPopularArticleList;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -12,5 +13,5 @@ import retrofit2.http.Query;
 public  interface ApiInterface {
 
     @GET("mostpopular/v2/mostviewed/all-sections/7.json?")
-    Call<Object> getMostpopularArticles(@Query("api-key") String api_key);
+    Call<MostPopularArticleList> getMostpopularArticles(@Query("api-key") String api_key);
 }

@@ -33,19 +33,22 @@ public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleWithI
     }
 
     @Override
-    public void onBindViewHolder(ArticleWithImageViewHolder holder, int position) {
-        //Article article = articles.get(position);
-        //holder.iVThumbnail.setImageURI(new Uri.Builder(URarticle.getMedia().get(0).getArticleThumbnailUrl()));
+    public void onBindViewHolder(ArticleWithImageViewHolder articleViewholder, int position) {
 
-        holder.tVTitle.setText("Supporters of Democratic of Jon Ossof after his ..");
-        holder.tVBy.setText("By DAVID LEONHARDT and STUART A THOMPSON");
-        holder.tVDate.setText("2017-06-23");
+        Article article = articles.get(position);
+
+        articleViewholder.tVTitle.setText(article.getTitle());
+        articleViewholder.tVBy.setText(article.getByline());
+        articleViewholder.tVDate.setText(article.getPublishedDate());
+
+        //TODO retrive images to show thumbnail.Use Glide or Picasso
+
+
 
     }
 
     @Override
     public int getItemCount() {
-        return 16;
-        //return articles.size();
+        return articles.size();
     }
 }

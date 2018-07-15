@@ -4,8 +4,6 @@ package hariharan.com.nyorktimes.data.pojo;
  * Created by hariharan on 15/07/18.
  */
 
-import android.util.Log;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -81,22 +79,23 @@ public class Medium {
     public void setMediaMetadata(List<MediaMetadatum> mediaMetadata) {
         this.mediaMetadata = mediaMetadata;
         for(MediaMetadatum m: this.mediaMetadata){
-            //if(m.getFormat().equals("Large")){
+            if(m.getFormat().equals("Large")){
                 thumbnailURrl = m.getUrl();
-            //}
+            }
         }
-        Log.d("Thumbnail",thumbnailURrl);
-        Log.d("Thumbnail",thumbnailURrl);
+
+        //TODO set function will not be called so thumbnail can be set in getArticle.Just check if this is true.
+        //If set function is called set the thumnaul in this method only.
+
     }
 
     public String getArticleThumbnailUrl(){
         for(MediaMetadatum m: this.mediaMetadata){
-            //if(m.getFormat().equals("Large")){
-            thumbnailURrl = m.getUrl();
-            //}
+            if(m.getFormat().equals("Large")){
+                thumbnailURrl = m.getUrl();
+            }
         }
-        Log.d("Thumbnail",thumbnailURrl);
-        Log.d("Thumbnail",thumbnailURrl);
+
         return thumbnailURrl;
     }
 
