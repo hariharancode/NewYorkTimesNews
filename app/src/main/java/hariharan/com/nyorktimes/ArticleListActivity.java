@@ -41,7 +41,7 @@ public class ArticleListActivity extends AppCompatActivity {
         articleRecyclerView = findViewById(R.id.rVArticle);
         articleRecyclerView.setHasFixedSize(true);
         articleRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        articleRecyclerView.setAdapter(articleRecycleViewAdapter = new ArticleRecycleViewAdapter(articles));
+        articleRecyclerView.setAdapter(articleRecycleViewAdapter = new ArticleRecycleViewAdapter(this,articles));
 
         if (!isNetworkAvailable()) {
             Toast.makeText(getApplicationContext(), "Wifi/Mobile data is not available",

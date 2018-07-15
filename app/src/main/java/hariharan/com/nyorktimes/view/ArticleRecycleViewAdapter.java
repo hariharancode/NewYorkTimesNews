@@ -1,9 +1,13 @@
 package hariharan.com.nyorktimes.view;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -18,8 +22,11 @@ import hariharan.com.nyorktimes.data.pojo.Article;
 public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleWithImageViewHolder>{
 
     private static ArrayList<Article> articles;
+    private final Context context;
 
-    public ArticleRecycleViewAdapter(ArrayList<Article> articles){
+    public ArticleRecycleViewAdapter(Context context,ArrayList<Article> articles){
+
+        this.context = context;
         this.articles = articles;
 
     }
@@ -42,6 +49,12 @@ public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleWithI
         articleViewholder.tVDate.setText(article.getPublishedDate());
 
         //TODO retrive images to show thumbnail.Use Glide or Picasso
+
+        if (!TextUtils.isEmpty(article.getMedia().get(0).getArticleThumbnailUrl())) {
+            Glide.with(context).load(article.getMedia().get(0).getArticleThumbnailUrl())
+                    .placeholder(R.mipmap.ic_launcher_round)
+                    .into(articleViewholder.iVThumbnail);
+        }
 
 
 
