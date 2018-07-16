@@ -5,6 +5,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,10 +14,10 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import hariharan.com.nyorktimes.network.ApiClientConfig;
-import hariharan.com.nyorktimes.network.ApiInterface;
 import hariharan.com.nyorktimes.data.pojo.Article;
 import hariharan.com.nyorktimes.data.pojo.MostPopularArticleList;
+import hariharan.com.nyorktimes.network.ApiClientConfig;
+import hariharan.com.nyorktimes.network.ApiInterface;
 import hariharan.com.nyorktimes.view.ArticleRecycleViewAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,6 +41,8 @@ public class ArticleListActivity extends AppCompatActivity {
         //Basic setuo for Recycler View
         articleRecyclerView = findViewById(R.id.rVArticle);
         articleRecyclerView.setHasFixedSize(true);
+        DividerItemDecoration itemDecor = new DividerItemDecoration(this, RecyclerView.HORIZONTAL);
+        articleRecyclerView.addItemDecoration(itemDecor);
         articleRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         articleRecyclerView.setAdapter(articleRecycleViewAdapter = new ArticleRecycleViewAdapter(this,articles));
 

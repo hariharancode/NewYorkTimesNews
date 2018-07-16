@@ -36,7 +36,7 @@ public class ArticleRecycleViewAdapter extends RecyclerView.Adapter<ArticleWithI
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.linear_article_view_template, parent, false);
 
-        return new ArticleWithImageViewHolder(itemView);
+        return new ArticleWithImageViewHolder(itemView,articles,context);
     }
 
     @Override
